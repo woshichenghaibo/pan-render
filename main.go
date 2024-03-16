@@ -9,9 +9,9 @@ import (
 func main() {
     p, _ := proxy.New(proxy.ProxyOptions{
         Balancer: func(req *http.Request) (string, error) {
-            return "https://www.google.com", nil
+            return "http://pan.fewdrive.eu.org", nil
         },
     })
-    http.ListenAndServe(":"+os.Getenv("PORT"), p)
+    http.ListenAndServe(":"+os.Getenv("5244"), p)
     
 }
